@@ -1,5 +1,9 @@
 # ELK Stack SIEM Lab — Attack Simulation & Custom Dashboard
 
+🚨 Simulated real-world attacks (Credential Stuffing, DNS Tunneling, PowerShell Exploitation)  
+📊 Built custom dashboards to visualize attack patterns  
+⚙️ Designed full SIEM pipeline using ELK Stack (Docker + Filebeat + Logstash)  
+
 A hands-on cybersecurity lab demonstrating the deployment of an ELK Stack 
 (Elasticsearch, Logstash, Kibana) SIEM, simulation of three real-world 
 cyberattacks, and a custom Kibana dashboard for security event visualization.
@@ -36,6 +40,9 @@ elk-siem-lab/
     └── SIEM_Dashboard_Report.docx   # Part 2 dashboard report
 ```
 
+📄 Detailed setup, troubleshooting, and analysis:
+👉 reports/ELK_Lab_Attack_Report.md and SIEM_Dashboard_Report.md
+
 ---
 
 ## 🏗️ Architecture
@@ -50,6 +57,18 @@ local log files.
 
 ---
 
+---
+
+## 🎥 Demo
+
+### 📊 Dashboard View
+![dashboard](screenshots/dashboard.png)
+
+### 🚨 DNS Attack Logs
+![logs](screenshots/DNs_logs.png)
+
+---
+
 ## 🚀 Setup & Deployment
 
 ### Prerequisites
@@ -57,9 +76,22 @@ local log files.
 - Docker + Docker Compose installed
 - Filebeat 8.11.0 installed on the host
 
+---
+
+## 💡 Why This Project Matters
+
+Modern SOC teams rely on SIEM systems to detect and respond to threats.
+
+This project demonstrates:
+- How attacks generate logs
+- How logs are processed and structured
+- How analysts detect malicious behavior using SIEM tools
+
+---
+
 ### 1. Start the ELK Stack
 ```bash
-cd elk-siem-lab
+cd ELK-Lab
 docker-compose up -d
 ```
 
@@ -147,6 +179,20 @@ Sysmon-style Event ID 1 (Process Create) and Event ID 4104
 **Detection signals:** Office apps spawning PowerShell, 
 `-encodedCommand`/`-ExecutionPolicy Bypass` flags, 
 `Invoke-Mimikatz`/`DownloadString` in command lines.
+
+---
+
+---
+
+## 🧠 Detection Strategy
+
+Instead of relying on pre-built rules, this lab focuses on:
+
+- Log enrichment using Logstash
+- Creating structured fields for analysis
+- Identifying anomalies through visualization
+
+This approach simulates how analysts manually investigate threats in early-stage SOC environments.
 
 ---
 
