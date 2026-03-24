@@ -41,7 +41,8 @@ elk-siem-lab/
 ```
 
 📄 Detailed setup, troubleshooting, and analysis:
-👉 reports/ELK_Lab_Attack_Report.md and SIEM_Dashboard_Report.md
+👉 ![Attack_Report](reports/ELK_Lab_Attack_Report.md)
+👉 ![SIEM_Dashboard_Report](SIEM_Dashboard_Report.md)
 
 ---
 
@@ -65,7 +66,11 @@ local log files.
 ![dashboard](screenshots/dashboard.png)
 
 ### 🚨 DNS Attack Logs
-![logs](screenshots/DNS_logs.png)
+![DNS logs](screenshots/DNS_logs.png)
+
+### Credential Stuffing Detection
+
+![Credential Stuffing](screenshots/Auth_logs.png)
 
 ---
 
