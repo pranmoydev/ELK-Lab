@@ -1,0 +1,33 @@
+filebeat.inputs:
+
+# Authentication / Credential Stuffing logs
+- type: log
+  enabled: true
+  paths:
+    - /var/log/auth.log
+    - /var/log/attack-simulation/auth_simulation.log
+  tags: ["authentication", "kali-client"]
+  fields:
+    log_type: authentication
+
+# DNS Tunneling logs
+- type: log
+  enabled: true
+  paths:
+    - /var/log/attack-simulation/dns_simulation.log
+  tags: ["dns", "kali-client"]
+  fields:
+    log_type: dns
+
+# PowerShell Exploitation logs
+- type: log
+  enabled: true
+  paths:
+    - /var/log/attack-simulation/powershell_simulation.log
+  tags: ["powershell", "kali-client"]
+  fields:
+    log_type: powershell
+
+# Output: Logstash on localhost (ELK on same machine)
+output.logstash:
+  hosts: ["localhost:5044"]
