@@ -65,7 +65,7 @@ local log files.
 ![dashboard](screenshots/dashboard.png)
 
 ### 🚨 DNS Attack Logs
-![logs](screenshots/DNs_logs.png)
+![logs](screenshots/DNS_logs.png)
 
 ---
 
